@@ -1,5 +1,6 @@
 import { Rajdhani, Rubik } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/views/appbars/Navbar/Navbar";
 
 const rajdhani = Rajdhani({
   variable: "--font-rajdhani",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${rajdhani.variable} ${rubik.variable} h-full antialiased`}
     >
+      <Navbar />
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
