@@ -19,6 +19,42 @@
   }
 }
 
+
+
+@layer base {
+  ::-moz-selection {
+    background: #000;
+    color: #ffffff;
+  }
+
+  ::-webkit-selection {
+    background: #000;
+    color: #ffffff;
+  }
+
+  ::selection {
+    background: #000;
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    background: #edfafa;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d7fb00;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000;
+  }
+
+}
+
+
+
+
 body {
   font-family: var(--font-rubik), sans-serif;
 }
