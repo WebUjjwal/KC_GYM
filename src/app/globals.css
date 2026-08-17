@@ -82,6 +82,25 @@ h6 {
   font-family: var(--font-rajdhani), sans-serif;
 }
 
+
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #ffffff85 !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px !important;
+  height: 10px !important;
+  border-radius: 12px !important;
+  background-color: #d7fb00 !important;
+
+  transition: all 0.4s ease-in-out;
+}
+
+
+
 .container {
   width: 100%;
   max-width: 1350px;

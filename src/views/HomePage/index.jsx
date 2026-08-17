@@ -1,6 +1,9 @@
+"use client";
+
 import Marquee from "@/components/Marquee";
 import Banner from "./Banner";
 import AboutUs from "./About";
+import TrainingSlider from "./TrainingSlider";
 
 const HomePage = () => {
   return (
@@ -8,6 +11,7 @@ const HomePage = () => {
       <Banner />
       <Marquee />
       <AboutUs />
+      <TrainingSlider />
     </>
   );
 };

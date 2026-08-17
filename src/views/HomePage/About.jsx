@@ -31,7 +31,7 @@ const AboutUs = () => {
   return (
     <>
       <div
-        className=" w-full
+        className="w-full
     py-25
     bg-[#171e2e]
     bg-[url('/section-bg-circle-shape.png')]
