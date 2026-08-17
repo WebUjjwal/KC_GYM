@@ -60,6 +60,7 @@ const AboutUs = () => {
             <div className="max-w-1/2 w-full">
               <SubHeadingV2
                 headingTitle="About us"
+                tag="About Us"
                 mainHeading={
                   <>
                     <span className="block">EMPOWERING YOU TO ACHIEVE</span>

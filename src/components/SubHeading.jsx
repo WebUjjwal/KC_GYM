@@ -23,13 +23,13 @@ const SubHeading = ({ headingTitle, tag, mainHeading, description }) => {
           >
             {headingTitle}
           </h3>
-          <h5 className="w-full flex items-center justify-center gap-3 text-[#d7fb00] lg:text-[16px] lg:leading-6.5 absolute bottom-3 font-bold">
+          <h5 className="w-full flex items-center justify-center gap-3 text-[#d7fb00] lg:text-[16px] lg:leading-6.5 absolute bottom-3 font-medium capitalize">
             <Image src="icon-sub-heading.svg" alt="" width={35} height={20} />
             {tag}
           </h5>
         </div>
 
-        <h2 className="whitespace-pre-line relative lg:text-[46px] lg:leading-13.75 font-bold mb-4 text-white">
+        <h2 className="whitespace-pre-line relative lg:text-[46px] lg:leading-13.75 font-bold mb-4 text-white uppercase">
           {mainHeading}
         </h2>
         <p className="whitespace-pre-line text-white lg:text-[18px] lg:leading-7.25">
