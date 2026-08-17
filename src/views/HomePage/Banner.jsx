@@ -30,7 +30,7 @@ const Banner = () => {
           src="fitwell-video.mp4"
         ></video>
 
-        <div className="h-screen w-screen flex items-center bg-[#171e2e8c] z-20">
+        <div className="h-screen w-screen flex items-center bg-[#171e2ea6] z-20">
           <div className="container">
             <div className="max-w-3/5">
               <h2 className="lg:text-[68px] lg:leading-20 font-extrabold text-white uppercase mb-4">
@@ -66,22 +66,19 @@ const Banner = () => {
               <ul className="text-white flex gap-14 mb-10">
                 {DATA.map(({ _id, count, title }) => {
                   return (
-                    
-                      <li key={_id}>
-                        <h4 className="lg:text-[30px] lg:leading-9 font-bold mb-1">
-                          {count}+
-                        </h4>
-                        <p className="lg:text-lg lg:leading-7.25">{title}</p>
-                      </li>
-
+                    <li key={_id}>
+                      <h4 className="lg:text-[30px] lg:leading-9 font-bold mb-1">
+                        {count}+
+                      </h4>
+                      <p className="lg:text-lg lg:leading-7.25">{title}</p>
+                    </li>
                   );
                 })}
               </ul>
 
-
               <div className="flex items-center gap-15">
-                <Button btnLink='/about' btnName="get started" />
-              <Button btnLink='/about' btnName="Explore More" />
+                <Button btnLink="/about" btnName="get started" />
+                <Button btnLink="/about" btnName="Explore More" />
               </div>
             </div>
           </div>
