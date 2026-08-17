@@ -48,13 +48,13 @@ const Navbar = () => {
                     <ul className="flex items-center gap-10">
                         {MENU_LINK.map(({_id, name, link}) => {
                             return (
-                                <>
+                               
                                     <li key={_id}>
                                         <h4 className="text-white font-bold capitalize lg:text-[18px]">
                                             <Link href={link}>{name}</Link>
                                         </h4>
                                     </li>
-                                </>
+                               
                             )
                         })}
                     </ul>

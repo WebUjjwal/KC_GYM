@@ -26,8 +26,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${rajdhani.variable} ${rubik.variable} h-full antialiased`}
     >
-      <Navbar />
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

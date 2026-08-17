@@ -66,14 +66,14 @@ const Banner = () => {
               <ul className="text-white flex gap-14 mb-10">
                 {DATA.map(({ _id, count, title }) => {
                   return (
-                    <>
+                    
                       <li key={_id}>
                         <h4 className="lg:text-[30px] lg:leading-9 font-bold mb-1">
                           {count}+
                         </h4>
                         <p className="lg:text-lg lg:leading-7.25">{title}</p>
                       </li>
-                    </>
+
                   );
                 })}
               </ul>
