@@ -5,8 +5,8 @@ import TrainingSlider from "./TrainingSlider";
 import WhyUs from "./WhyUs";
 import PricingPlan from "./PricingPlan";
 import OurTrainers from "./OurTrainers";
-import FAQCard from "@/components/FAQCard";
 import FAQ from "./FAQ";
+import TestimonialSlider from "./TestimonialSlider";
 
 const HomePage = () => {
   return (
@@ -19,6 +19,7 @@ const HomePage = () => {
       <PricingPlan />
       <OurTrainers />
       <FAQ />
+      <TestimonialSlider />
     </>
   );
 };
