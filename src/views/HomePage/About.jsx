@@ -42,13 +42,6 @@ const AboutUs = () => {
         <div className="container">
           <div className="flex items-center">
             <div className="max-w-1/2 w-full">
-              {/* <Image
-                src="why-choose-image-1.jpg"
-                height={100}
-                width={100}
-                alt=""
-              /> */}
-
               <Image
                 className=""
                 src="/about-section-image.jpg"
