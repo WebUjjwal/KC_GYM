@@ -32,7 +32,6 @@ const TrainerCard = () => {
   return (
     <>
       <div className="w-full flex items-center lg:gap-7.5">
-        {" "}
         {TRAINER_DATA.map(({ _id, name, role, image }) => {
           return (
             <div
@@ -40,7 +39,6 @@ const TrainerCard = () => {
               className="group relative h-105 w-full max-w-1/4 overflow-hidden rounded-[22px] bg-black
       "
             >
-              {/* Image */}
               <Image
                 src={image}
                 alt={name}
@@ -55,20 +53,18 @@ const TrainerCard = () => {
         "
               />
 
-              {/* Bottom Gradient */}
               <div
                 className="
           pointer-events-none
           absolute inset-x-0 bottom-0
           h-[60%]
-          bg-gradient-to-t
+          bg-linear-to-t
           from-black/95
           via-black/50
           to-transparent
         "
               />
 
-              {/* Content */}
               <div
                 className="
           absolute
@@ -81,7 +77,6 @@ const TrainerCard = () => {
           pb-7
         "
               >
-                {/* Role */}
                 <span
                   className="
             mb-1
@@ -98,7 +93,6 @@ const TrainerCard = () => {
                   {role}
                 </span>
 
-                {/* Name */}
                 <h3
                   className="
             text-xl
@@ -113,7 +107,6 @@ const TrainerCard = () => {
                   {name}
                 </h3>
 
-                {/* Social Icons */}
                 <div
                   className="
             mt-4
@@ -134,7 +127,6 @@ const TrainerCard = () => {
             group-hover:pointer-events-auto
           "
                 >
-                  {/* Facebook */}
                   <a
                     href="#"
                     aria-label="Facebook"
@@ -154,7 +146,6 @@ const TrainerCard = () => {
                     <FaFacebookF size={17} />
                   </a>
 
-                  {/* Instagram */}
                   <a
                     href="#"
                     aria-label="Instagram"
@@ -174,7 +165,6 @@ const TrainerCard = () => {
                     <FaInstagram size={18} />
                   </a>
 
-                  {/* Website */}
                   <a
                     href="#"
                     aria-label="Website"

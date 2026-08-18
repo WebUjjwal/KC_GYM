@@ -5,6 +5,8 @@ import TrainingSlider from "./TrainingSlider";
 import WhyUs from "./WhyUs";
 import PricingPlan from "./PricingPlan";
 import OurTrainers from "./OurTrainers";
+import FAQCard from "@/components/FAQCard";
+import FAQ from "./FAQ";
 
 const HomePage = () => {
   return (
@@ -16,6 +18,7 @@ const HomePage = () => {
       <WhyUs />
       <PricingPlan />
       <OurTrainers />
+      <FAQ />
     </>
   );
 };
