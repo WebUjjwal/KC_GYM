@@ -14,24 +14,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #3f4553;
     --foreground: #ededed;
   }
 }
 
 @layer base {
   ::-moz-selection {
-    background: #000;
+    background: #3f4553;
     color: #ffffff;
   }
 
   ::-webkit-selection {
-    background: #000;
+    background: #3f4553;
     color: #ffffff;
   }
 
   ::selection {
-    background: #000;
+    background: #3f4553;
     color: #ffffff;
   }
 
@@ -45,7 +45,7 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #000;
+    background: #3f4553;
   }
 
 }

@@ -110,13 +110,11 @@ const PricingPlan = () => {
       icon: "./icon-pricing-benefit-1.svg",
       give: "Get 30 day free trial",
     },
-
     {
       _id: 6509,
       icon: "./icon-pricing-benefit-2.svg",
       give: "No any hidden fees pay",
     },
-
     {
       _id: 3340,
       icon: "./icon-pricing-benefit-3.svg",
@@ -200,7 +198,7 @@ const PricingPlan = () => {
           <div className="flex items-center justify-center gap-25 lg:mt-17.5">
             {PRICE_POLICY.map(({ _id, icon, give }) => {
               return (
-                <div key={_id} className="flex items-center gap-3  text-white">
+                <div key={_id} className="flex items-center gap-3 text-white">
                   <Image src={icon} alt="" width={22} height={22} />
                   <p className="lg:text-[18px] lg:leading-4.5 font-normal">
                     {give}
