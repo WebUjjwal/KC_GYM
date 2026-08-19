@@ -22,6 +22,7 @@ const HomePage = () => {
       <FAQ />
       <TestimonialSlider />
       <News />
+      <Marquee />
     </>
   );
 };
