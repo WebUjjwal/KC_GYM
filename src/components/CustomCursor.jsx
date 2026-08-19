@@ -16,43 +16,47 @@ const CustomCursor = () => {
   });
 
   const [isHeading, setIsHeading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
+
+      setIsVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsVisible(false);
+    };
+
+    const handleMouseEnter = () => {
+      setIsVisible(true);
     };
 
     const handleMouseOver = (e) => {
-      const target = e.target;
+      const heading = e.target.closest("h2");
 
-      if (target.closest("h2")) {
-        setIsHeading(true);
-      } else {
-        setIsHeading(false);
-      }
+      setIsHeading(!!heading);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
+
+    document.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener("mouseenter", handleMouseEnter);
+
     document.addEventListener("mouseover", handleMouseOver);
 
     let animationFrame;
 
     const animate = () => {
-      // Smooth follow
-      position.current.x += (mouse.current.x - position.current.x) * 0.15;
+      position.current.x += (mouse.current.x - position.current.x) * 0.12;
 
-      position.current.y += (mouse.current.y - position.current.y) * 0.15;
+      position.current.y += (mouse.current.y - position.current.y) * 0.12;
 
       if (cursorRef.current) {
-        cursorRef.current.style.transform = `
-          translate3d(
-            ${position.current.x}px,
-            ${position.current.y}px,
-            0
-          )
-          translate(-50%, -50%)
-        `;
+        cursorRef.current.style.left = `${position.current.x}px`;
+        cursorRef.current.style.top = `${position.current.y}px`;
       }
 
       animationFrame = requestAnimationFrame(animate);
@@ -62,7 +66,12 @@ const CustomCursor = () => {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+
+      document.removeEventListener("mouseleave", handleMouseLeave);
+      document.removeEventListener("mouseenter", handleMouseEnter);
+
       document.removeEventListener("mouseover", handleMouseOver);
+
       cancelAnimationFrame(animationFrame);
     };
   }, []);
@@ -74,29 +83,27 @@ const CustomCursor = () => {
         fixed
         left-0
         top-0
-        z-[99999]
+        z-[999999]
         pointer-events-none
-        flex
-        items-center
-        justify-center
+        -translate-x-1/2
+        -translate-y-1/2
         rounded-full
+
         transition-all
         duration-300
         ease-out
-         mix-blend-difference
 
+        mix-blend-difference
+
+        ${isVisible ? "opacity-100" : "opacity-0"}
 
         ${
           isHeading
-            ? "h-16 w-16 bg-white scale-100"
-            : "h-2.5 w-2.5 bg-[#d7fb00] scale-100"
+            ? "h-[70px] w-[70px] bg-white"
+            : "h-[10px] w-[10px] bg-[#d7fb00]"
         }
       `}
-    >
-      {isHeading && (
-        <span className="text-[9px] font-bold uppercase text-black"></span>
-      )}
-    </div>
+    />
   );
 };
 
