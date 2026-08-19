@@ -33,13 +33,13 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png"></link>
       </head>
-      <body className="min-h-full flex flex-col cursor-default">
+      <body className="min-h-full flex flex-col bg-black cursor-default">
         <PageLoader />
         <CustomCursor />
         <SmoothScroll />
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

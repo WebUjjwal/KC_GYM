@@ -6,7 +6,7 @@ const Button = ({ btnLink, btnName }) => {
     <>
       <div className="relative w-fit">
         <Link
-          className="group relative py-4 px-7.5 bg-[#d7fb00] rounded-[50px] flex items-center w-fit lg:text-[16px] capitalize font-bold transition-transform duration-300 hover:bg-white"
+          className="group relative lg:py-4 py-3 lg:px-7.5 px-5 bg-[#d7fb00] rounded-[50px] flex items-center w-fit lg:text-[16px] text-[14px] capitalize font-bold transition-transform duration-300 hover:bg-white"
           href={btnLink}
         >
           {btnName}
@@ -16,8 +16,10 @@ const Button = ({ btnLink, btnName }) => {
             absolute
             right-[-22%]
             top-1/2
-            w-12.5
-            h-12.5
+            lg:w-12.5
+            w-10
+            lg:h-12.5
+            h-10
             bg-[#d7fb00]
             rounded-full
             flex

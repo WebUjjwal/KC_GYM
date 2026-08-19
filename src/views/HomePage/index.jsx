@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <>
       <Banner />
-      <Marquee />
+      {/* <Marquee />
       <AboutUs />
       <TrainingSlider />
       <WhyUs />
@@ -22,7 +22,7 @@ const HomePage = () => {
       <FAQ />
       <TestimonialSlider />
       <News />
-      <Marquee />
+      <Marquee /> */}
     </>
   );
 };
