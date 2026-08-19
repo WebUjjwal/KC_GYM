@@ -1,38 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 
 const PageLoader = () => {
-  const pathname = usePathname();
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Initial page load
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1200);
+    }, 1400);
 
     return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    // Page navigation
-    let timer;
-    const startTimer = setTimeout(() => {
-      setLoading(true);
-
-      timer = setTimeout(() => {
-        setLoading(false);
-      }, 900);
-    }, 0);
-
-    return () => {
-      clearTimeout(startTimer);
-      if (timer) clearTimeout(timer);
-    };
-  }, [pathname]);
 
   if (!loading) return null;
 
@@ -41,70 +21,72 @@ const PageLoader = () => {
       className="
         fixed
         inset-0
-        z-999999
+        z-[999999]
         flex
         items-center
         justify-center
         bg-[#d7fb00]
+        overflow-hidden
       "
     >
-      {/* Loader */}
-      <div className="relative flex h-20 w-20 items-center justify-center">
-        {/* Top Arc */}
-        <span
-          className="
-            absolute
-            left-1/2
-            top-0
-            h-10
-            w-10
-            -translate-x-1/2
-            rounded-t-full
-            border-t
-            border-black
-            animate-spin
-          "
-          style={{
-            animationDuration: "1.5s",
-          }}
-        />
-
-        {/* Bottom Arc */}
-        <span
-          className="
-            absolute
-            bottom-0
-            left-1/2
-            h-10
-            w-10
-            -translate-x-1/2
-            rounded-b-full
-            border-b
-            border-black
-            animate-spin
-          "
-          style={{
-            animationDuration: "1.5s",
-            animationDirection: "reverse",
-          }}
-        />
-
-        {/* Center Logo */}
+      {/* Loader Wrapper */}
+      <div className="relative h-[100px] w-[100px]">
         <div
           className="
+          absolute
+            grid
+            aspect-square
+            w-[100px]
+            rounded-full
+            border-[4px]
+            border-transparent
+            border-r-[#171e2e]
+            animate-[l15_1s_linear_infinite]
+
+            before:content-['']
+            before:col-start-1
+            before:row-start-1
+            before:m-[2px]
+            before:rounded-full
+            before:border-[4px]
+            before:border-transparent
+            before:border-r-[#171e2e]
+            before:animate-[l15_2s_infinite]
+
+            after:content-['']
+            after:col-start-1
+            after:row-start-1
+            after:m-[8px]
+            after:rounded-full
+            after:border-[4px]
+            after:border-transparent
+            after:border-r-[#171e2e]
+            after:animate-[l15_3s_infinite]
+          "
+        />
+
+        {/* Logo */}
+        <div
+          className="
+            absolute
+            left-1/2
+            top-1/2
+            -translate-x-1/2
+            -translate-y-1/2
             flex
-            h-10
-            w-10
             items-center
             justify-center
-            rounded-full
-            bg-black
-            text-[#d7fb00]
-            text-xl
-            font-black
+            h-[42px]
+            w-[42px]
           "
         >
-          ⚡
+          <Image
+            className=""
+            src="/loader.svg"
+            alt="Gym Logo"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
     </div>
