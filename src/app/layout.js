@@ -2,6 +2,7 @@ import { Rajdhani, Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/views/appbars/Navbar/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 
 const rajdhani = Rajdhani({
   variable: "--font-rajdhani",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png"></link>
       </head>
       <body className="min-h-full flex flex-col cursor-default">
+        <CustomCursor />
         <SmoothScroll />
         <Navbar />
         {children}
