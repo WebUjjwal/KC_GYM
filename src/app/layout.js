@@ -4,6 +4,7 @@ import Navbar from "@/views/appbars/Navbar/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import Footer from "@/views/appbars/Footer/Footer";
+import PageLoader from "@/components/PageLoader";
 
 const rajdhani = Rajdhani({
   variable: "--font-rajdhani",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png"></link>
       </head>
       <body className="min-h-full flex flex-col cursor-default">
+        <PageLoader />
         <CustomCursor />
         <SmoothScroll />
         <Navbar />
