@@ -83,16 +83,14 @@ const CustomCursor = () => {
         fixed
         left-0
         top-0
-        z-[999999]
+        z-999999
         pointer-events-none
         -translate-x-1/2
         -translate-y-1/2
         rounded-full
-
         transition-all
         duration-300
         ease-out
-
         mix-blend-difference
 
         ${isVisible ? "opacity-100" : "opacity-0"}

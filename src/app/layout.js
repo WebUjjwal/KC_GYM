@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/views/appbars/Navbar/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import Footer from "@/views/appbars/Footer/Footer";
 
 const rajdhani = Rajdhani({
   variable: "--font-rajdhani",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         <SmoothScroll />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

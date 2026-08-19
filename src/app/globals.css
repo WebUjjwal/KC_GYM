@@ -64,7 +64,8 @@
   }
 }
 
-body {
+body,
+input {
   font-family: var(--font-rubik), sans-serif;
 }
 
