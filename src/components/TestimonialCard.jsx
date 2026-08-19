@@ -38,9 +38,7 @@ const TestimonialCard = () => {
 
   return (
     <section className="relative w-full overflow-hidden ">
-      {/* Slider */}
       <div className="relative mx-auto w-full">
-        {/* Previous Button */}
         <button
           onClick={prevSlide}
           aria-label="Previous testimonial"
@@ -69,7 +67,6 @@ const TestimonialCard = () => {
           <ChevronLeft size={30} strokeWidth={2} />
         </button>
 
-        {/* Next Button */}
         <button
           onClick={nextSlide}
           aria-label="Next testimonial"
@@ -79,8 +76,8 @@ const TestimonialCard = () => {
             top-1/2
             z-20
             flex
-            h-[60px]
-            w-[60px]
+            h-15
+            w-15
             -translate-y-1/2
             items-center
             justify-center
@@ -98,7 +95,6 @@ const TestimonialCard = () => {
           <ChevronRight size={30} strokeWidth={2} />
         </button>
 
-        {/* Slides Container */}
         <div className="overflow-hidden px-20 md:px-28">
           <div
             className="
@@ -121,8 +117,7 @@ const TestimonialCard = () => {
                   md:px-10
                 "
               >
-                <div className="mx-auto flex max-w-[900px] flex-col items-center text-center">
-                  {/* Testimonial Text */}
+                <div className="mx-auto flex max-w-225 flex-col items-center text-center">
                   <p
                     className="
                       max-w-[900px]
@@ -137,13 +132,12 @@ const TestimonialCard = () => {
                     {testimonial.text}
                   </p>
 
-                  {/* User Image */}
                   <div className="mt-8">
                     <div
                       className="
                         relative
-                        h-[100px]
-                        w-[100px]
+                        h-25
+                        w-25
                         overflow-hidden
                         rounded-full
                         border
@@ -159,7 +153,6 @@ const TestimonialCard = () => {
                     </div>
                   </div>
 
-                  {/* Name */}
                   <h3
                     className="
                       mt-4
@@ -171,7 +164,6 @@ const TestimonialCard = () => {
                     {testimonial.name}
                   </h3>
 
-                  {/* Company */}
                   <p
                     className="
                       mt-2
@@ -189,7 +181,6 @@ const TestimonialCard = () => {
         </div>
       </div>
 
-      {/* Dots */}
       <div className="relative z-10 mt-8 flex justify-center gap-2">
         {testimonials.map((_, index) => (
           <button

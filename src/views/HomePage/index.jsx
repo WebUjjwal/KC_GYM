@@ -7,6 +7,7 @@ import PricingPlan from "./PricingPlan";
 import OurTrainers from "./OurTrainers";
 import FAQ from "./FAQ";
 import TestimonialSlider from "./TestimonialSlider";
+import News from "./News";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <OurTrainers />
       <FAQ />
       <TestimonialSlider />
+      <News />
     </>
   );
 };
