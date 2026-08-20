@@ -10,7 +10,7 @@ const items = [...marqueeItems, ...marqueeItems];
 
 const Marquee = () => {
   return (
-    <div className="overflow-hidden bg-[#d7fb00] py-5">
+    <div className="overflow-hidden bg-[#d7fb00] lg:py-5 py-3.5">
       <div className="flex w-max animate-marquee">
         <div className="flex shrink-0 items-center">
           {items.map((item, index) => (

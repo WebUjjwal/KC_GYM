@@ -13,8 +13,8 @@ const HomePage = () => {
   return (
     <>
       <Banner />
-      {/* <Marquee />
-      <AboutUs />
+      <Marquee />
+      {/* <AboutUs />
       <TrainingSlider />
       <WhyUs />
       <PricingPlan />
