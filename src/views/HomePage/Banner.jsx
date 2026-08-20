@@ -21,19 +21,28 @@ const Banner = () => {
 
   return (
     <>
-      <div className="overflow-hidden relative flex items-center">
+      <div className="overflow-hidden h-screen relative flex items-center">
         <video
           autoPlay
           loop
           muted
-          className="absolute w-full top-0 left-0 right-0 bottom-0 z-10"
+          playsInline
+          className="
+          absolute
+          inset-0
+          z-10
+          h-full
+          w-full
+          object-cover
+          object-center
+        "
           src="fitwell-video.mp4"
-        ></video>
+        />
 
         <div className="h-screen w-screen flex items-center bg-[#171e2ea6] z-20">
           <div className="container">
-            <div className="max-w-3/5">
-              <h2 className="lg:text-[68px] lg:leading-20 font-extrabold text-white uppercase mb-4">
+            <div className="w-full lg:max-w-3/5 md:max-w-4/5">
+              <h2 className="lg:text-[68px] md:text-[45px] text-[30px] lg:leading-20 md:leading-14 leading-10 font-extrabold text-white uppercase mb-4">
                 Your body can{" "}
                 <span className="text-[#d7fb00]">
                   stand <br /> almost
@@ -44,7 +53,9 @@ const Banner = () => {
                 className="
                 text-white 
                 lg:text-lg 
+                text-[16px]
                 lg:leading-7.25 
+                leading-6
                 relative
                 pl-5
                 before:absolute
@@ -63,20 +74,22 @@ const Banner = () => {
                 & truly capable of!
               </p>
 
-              <ul className="text-white flex gap-14 mb-10">
+              <ul className="text-white flex md:gap-14 gap-8 mb-10 flex-wrap">
                 {DATA.map(({ _id, count, title }) => {
                   return (
                     <li key={_id}>
-                      <h4 className="lg:text-[30px] lg:leading-9 font-bold mb-1">
+                      <h4 className="lg:text-[30px] text-[20px] lg:leading-9 leading-7 font-bold mb-1">
                         {count}+
                       </h4>
-                      <p className="lg:text-lg lg:leading-7.25">{title}</p>
+                      <p className="lg:text-lg text-[16px] lg:leading-7.25 leading-5">
+                        {title}
+                      </p>
                     </li>
                   );
                 })}
               </ul>
 
-              <div className="flex items-center gap-15">
+              <div className="flex flex-wrap items-center lg:gap-15 gap-10">
                 <Button btnLink="/about" btnName="get started" />
                 <Button btnLink="/about" btnName="Explore More" />
               </div>

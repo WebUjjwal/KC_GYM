@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png"></link>
       </head>
-      <body className="min-h-full flex flex-col bg-black cursor-default">
+      <body className="min-h-full flex flex-col cursor-default">
         <PageLoader />
         <CustomCursor />
         <SmoothScroll />
